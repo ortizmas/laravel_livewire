@@ -1,10 +1,7 @@
-<div>
-    {{-- If your happiness depends on money, you will never be happy with yourself. --}}
-    <ul>
-        @foreach ($this->projects as $project)
-            <li>
-                <a href="/project/{{$project->id}}">{{ $project->id}}. {{ $project->title }}</a>
-            </li>
-        @endforeach
-    </ul>
+<div class="grid grid-cols-2 gap-4">
+    @foreach ($this->projects as $project)
+        <a href="{{ route('projects.show', $project) }}">
+            <x-projects.simple-card :$project />
+        </a>
+    @endforeach
 </div>

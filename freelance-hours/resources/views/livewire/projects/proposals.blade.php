@@ -1,4 +1,4 @@
-{{-- <x-proposals :proposals="$project->proposals" /> --}}
-    <div>
-        Proposal
-    </div>
+<x-proposals :proposals="$project->proposals" />
+
+    
+    
